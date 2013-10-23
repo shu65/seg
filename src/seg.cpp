@@ -59,7 +59,7 @@ void Seg::InitAaCodeMap(void) {
 }
 
 int Seg::MaskSequence(const std::string &seq, std::string *masked_seq) {
-	if (seq.size() < window_) {
+  if (seq.size() < (size_t)window_) {
 		return 1;
 	}
 	vector<char> copyed_seq(seq.length());
